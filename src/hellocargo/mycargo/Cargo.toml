@@ -1,0 +1,7 @@
+[package]
+name = "mycargo"
+version = "0.1.0"
+authors = ["tetsuro"]
+edition = "2018"
+
+[dependencies]

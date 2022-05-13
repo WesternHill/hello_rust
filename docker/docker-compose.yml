@@ -1,0 +1,18 @@
+version: '2.3'
+
+services:
+  app:
+    build: .
+    image: rust
+    container_name: rust
+    environment:
+      - DISPLAY=${DISPLAY}
+      - QT_X11_NO_MITSHM=1
+    volumes:
+      - ../src/:/mnt/host/src
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - $HOME/.Xauthority:/root/.Xauthority
+    working_dir: /mnt/host/src
+    network_mode: "host"
+    privileged: true
+    tty: true
