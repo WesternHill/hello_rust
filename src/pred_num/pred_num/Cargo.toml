@@ -1,0 +1,8 @@
+[package]
+name = "pred_num"
+version = "0.1.0"
+authors = ["tetsuro"]
+edition = "2018"
+
+[dependencies]
+rand = "0.3.14"

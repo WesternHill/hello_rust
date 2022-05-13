@@ -41,11 +41,13 @@
     * 代入:`mvar = 1`
     * 参照:`println(mvar)`
 * アドレスアクセス
-    ```rust
-    let mut mvar = 10 
-    let addr = &mvar // mvarのアドレスを不可変変数'addr'にセット
-    println!("addr:{}",*addr)
-    ```
+    * TODO: unsafeじゃないとだめ？
+
+## 変数へのキャスト
+```rust
+let mut str_a = "21";
+let mut var1 :u32 = str_a.parse().expect(); // 変数を数字に変換（parse())し、uint32にキャスト(`:u32`)
+```
 
 ## 処理結果の判定
 * 関数内で`panic(エラーメッセージ)`を呼ぶと、関数呼び出し元に`io::Result`が暗黙的に返される
